@@ -1,6 +1,8 @@
 # Vagrant: Nomad Cluster (Single Vault server on node3)
 Spins up 3 virtual machines with Nomad installed as both Client and Server mode. Node3 also has Vault installed to show Nomad-Vault integration as well as MySQL server. WARNING: Nomad severs are configured with the root-token. A Nomad token role should be used in production as shown here: https://www.nomadproject.io/docs/vault-integration/index.html.
 
+There are some simple example jobs in all of the VMs under `~vagrant/example-jobs`
+
 # Usage
 If you would like to use the enterprise binaries download and place the unzipped binaries in the root directory of nomad-guides
 

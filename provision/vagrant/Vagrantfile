@@ -125,6 +125,9 @@ sudo chmod a+w /etc/nomad.d
 # Set hostname's IP to made advertisement Just Work
 sudo sed -i -e "s/.*nomad.*/$(ip route get 1 | awk '{print $NF;exit}') nomad/" /etc/hosts
 
+# Install example jobs
+cp -R /vagrant/example-jobs $HOME
+
 nomad -autocomplete-install
 sudo rm -f /vagrant/nomad.zip
 NOMAD_INSTALL
