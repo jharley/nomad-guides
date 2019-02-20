@@ -48,6 +48,7 @@ job "nginx" {
         datacenter:  {{ env "NOMAD_DC" }}
         EOH
         destination = "local/data/nginx/index.html"
+        change_mode = "noop"
       }
       resources {
         cpu    = 100 # 100 MHz
