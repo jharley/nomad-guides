@@ -22,7 +22,9 @@ job "hello" {
 
       resources {
         network {
-          port "http" {}
+          port "http" {
+            static = 5000
+          }
         }
       }
 
